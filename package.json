@@ -1,0 +1,24 @@
+{
+  "name": "my-app",
+  "private": true,
+  "scripts": {
+    "install:client": "cd packages/client && npm i",
+    "install:server": "cd packages/server && npm i",
+    "postinstall": "run-p install:*",
+    "dev": "concurrently --kill-others --kill-others-on-fail \"npm run dev-client\" \"npm run dev-server\"",
+    "dev-client": "cd packages/client && npm run dev",
+    "dev-server": "cd packages/server && npm run dev",
+    "lint": "cd packages/client && npm run lint",
+    "build": "npm run build-client && npm run build-server",
+    "build-client": "cd packages/client && npm run build",
+    "build-server": "cd packages/server && npm run build",
+    "rm-modules": "rm -rf node_modules && cd packages/client && rm -rf node_modules && cd ../server && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

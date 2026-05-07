@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "study_plans",
+  "info": {
+    "singularName": "study-plan",
+    "pluralName": "study-plans",
+    "displayName": "Study Plan",
+    "description": "10 kunlik / 1 oy / 2 oy reja variantlari"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "text"
+    },
+    "durationDays": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "minImportance": {
+      "type": "integer",
+      "default": 5,
+      "min": 1,
+      "max": 10
+    },
+    "includedLevels": {
+      "type": "json"
+    },
+    "track": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::track.track",
+      "inversedBy": "studyPlans"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": false
+    },
+    "startedAt": {
+      "type": "datetime"
+    }
+  }
+}

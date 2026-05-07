@@ -1,0 +1,66 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Strapi application",
+  "scripts": {
+    "build": "strapi build",
+    "console": "strapi console",
+    "deploy": "strapi deploy",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "5.33.1",
+    "@strapi/plugin-graphql": "5.33.1",
+    "@strapi/plugin-users-permissions": "5.33.1",
+    "@strapi/strapi": "5.33.1",
+    "pg": "8.10.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.0.0",
+    "styled-components": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/eslint-parser": "^7.22.9",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "overrides": {
+    "@strapi/admin": "5.33.1",
+    "@strapi/content-manager": "5.33.1",
+    "@strapi/content-releases": "5.33.1",
+    "@strapi/content-type-builder": "5.33.1",
+    "@strapi/core": "5.33.1",
+    "@strapi/data-transfer": "5.33.1",
+    "@strapi/database": "5.33.1",
+    "@strapi/design-system": "2.0.0-rc.36",
+    "@strapi/email": "5.33.1",
+    "@strapi/generators": "5.33.1",
+    "@strapi/i18n": "5.33.1",
+    "@strapi/icons": "2.0.0-rc.36",
+    "@strapi/logger": "5.33.1",
+    "@strapi/openapi": "5.33.1",
+    "@strapi/permissions": "5.33.1",
+    "@strapi/plugin-cloud": "5.33.1",
+    "@strapi/plugin-graphql": "5.33.1",
+    "@strapi/plugin-users-permissions": "5.33.1",
+    "@strapi/provider-email-sendmail": "5.33.1",
+    "@strapi/review-workflows": "5.33.1",
+    "@strapi/types": "5.33.1",
+    "@strapi/typescript-utils": "5.33.1",
+    "@strapi/upload": "5.33.1"
+  },
+  "engines": {
+    "node": ">=20.0.0 <=24.x.x",
+    "npm": ">=6.0.0"
+  }
+}
+</content>

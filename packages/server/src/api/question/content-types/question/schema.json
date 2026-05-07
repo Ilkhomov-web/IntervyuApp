@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question",
+    "description": "Test va ochiq savollar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "questions"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["multiple_choice", "true_false", "short_answer", "code_output", "open_ended"],
+      "default": "multiple_choice",
+      "required": true
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "enum": ["easy", "medium", "hard"],
+      "default": "medium",
+      "required": true
+    },
+    "questionText": {
+      "type": "text",
+      "required": true
+    },
+    "codeSnippet": {
+      "type": "text"
+    },
+    "options": {
+      "type": "json"
+    },
+    "correctAnswer": {
+      "type": "text",
+      "required": true
+    },
+    "explanation": {
+      "type": "richtext"
+    },
+    "importance": {
+      "type": "integer",
+      "default": 5,
+      "min": 1,
+      "max": 10
+    },
+    "attempts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attempt.attempt",
+      "mappedBy": "question"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "next/core-web-vitals"
+  ],
+  "parserOptions": {
+    "requireConfigFile": false,
+    "babelOptions": {
+      "presets": ["next/babel"]
+    }
+  },
+  "rules": {
+    "no-console": 0,
+    "global-require": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
+    "@next/next/no-img-element": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "no-use-before-define": "off",
+    "no-unused-vars": "warn",
+    "no-param-reassign": "warn",
+    "no-continue": "off",
+    "camelcase": "warn"
+  }
+}

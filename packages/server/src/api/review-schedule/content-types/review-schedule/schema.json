@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review_schedules",
+  "info": {
+    "singularName": "review-schedule",
+    "pluralName": "review-schedules",
+    "displayName": "Review Schedule",
+    "description": "Spaced repetition (SM-2 algoritmi). Mavzular qachon qaytarilishini boshqaradi."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::topic.topic"
+    },
+    "easeFactor": {
+      "type": "decimal",
+      "default": 2.5,
+      "min": 1.3
+    },
+    "interval": {
+      "type": "integer",
+      "default": 1,
+      "min": 0
+    },
+    "repetitions": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "nextReviewDate": {
+      "type": "date",
+      "required": true
+    },
+    "lastScore": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 100
+    },
+    "lastReviewedAt": {
+      "type": "datetime"
+    },
+    "totalReviews": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

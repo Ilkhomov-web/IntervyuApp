@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attempts",
+  "info": {
+    "singularName": "attempt",
+    "pluralName": "attempts",
+    "displayName": "Attempt",
+    "description": "Foydalanuvchi urinishlari (statistika uchun)"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic"
+    },
+    "question": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question.question",
+      "inversedBy": "attempts"
+    },
+    "practicalTask": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::practical-task.practical-task",
+      "inversedBy": "attempts"
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": ["question", "practical", "review"],
+      "default": "question",
+      "required": true
+    },
+    "userAnswer": {
+      "type": "text"
+    },
+    "score": {
+      "type": "integer",
+      "default": 0,
+      "min": 0,
+      "max": 100
+    },
+    "isCorrect": {
+      "type": "boolean",
+      "default": false
+    },
+    "timeSpentSeconds": {
+      "type": "integer",
+      "default": 0
+    },
+    "aiEvaluation": {
+      "type": "text"
+    },
+    "attemptedAt": {
+      "type": "datetime",
+      "required": true
+    }
+  }
+}
